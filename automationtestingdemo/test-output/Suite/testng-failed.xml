@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="a" value="7"/>
+  <parameter name="b" value="13"/>
+  <parameter name="browser" value="edge"/>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="automationtesting.ReportDemo">
+        <methods>
+          <include name="test2"/>
+          <include name="getResult"/>
+          <include name="tearDown"/>
+          <include name="test3"/>
+          <include name="startReport"/>
+        </methods>
+      </class> <!-- automationtesting.ReportDemo -->
+      <class name="automationtesting.ListnrTestCase">
+        <methods>
+          <include name="tests3"/>
+          <include name="getResult"/>
+          <include name="tests2"/>
+          <include name="tearDown1"/>
+          <include name="reportGenrator"/>
+        </methods>
+      </class> <!-- automationtesting.ListnrTestCase -->
+    </classes>
+  </test> <!-- Test(failed) -->
+  <test thread-count="5" name="testParam(failed)">
+    <classes>
+      <class name="automationtesting.ParameterDemo">
+        <methods>
+          <include name="testParam" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- automationtesting.ParameterDemo -->
+    </classes>
+  </test> <!-- testParam(failed) -->
+</suite> <!-- Failed suite [Suite] -->

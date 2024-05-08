@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <test name="Test">
+  
+    <classes>
+      <class name="automationtesting.DemoTst"/>
+      <class name="automationtesting.ReportDemo"/>
+      <class name="automationtesting.ListnrTestCase"/>
+      <class name="automationtesting.TestngAnnotationDemo"/>
+      </classes>
+  </test>
+  	  <parameter name="browser" value="edge"></parameter>
+      <parameter name="a" value="7"></parameter>
+	  <parameter name="b" value="13"></parameter>	  
+	  <test name="testParam">
+     	 <classes>
+      		<class name="automationtesting.ParameterDemo">
+      			<methods>
+      				<include name="testParam"/>
+      			</methods>
+      			<methods>
+      				<exclude name="subNum"/>
+      			</methods>
+      		</class>
+   	  	 </classes>
+    
+  	  </test> <!-- Test -->
+</suite> <!-- Suite -->
